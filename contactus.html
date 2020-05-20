@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Kingsman</title>
+
+    
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+    <script type="text/javascript">
+        var map;
+
+        DG.then(function () {
+            map = DG.map('map', {
+                center: [43.2351464,76.9097448,15],
+                zoom: 13
+            });
+
+            DG.marker([43.2351464,76.9097448,15]).addTo(map).bindPopup('Вы кликнули по мне!');
+        });
+    </script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"> <img src="img/иконка главная.jpg" height="35" width="41"> </a>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html"><span class="fa fa-home fa-lg"></span> Главная </a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html"><span class="fa fa-info fa-lg"></span> О нас </a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html"> <span class="fa fa-list fa-lg"></span> Регистрация </a></li>
+                    <li class="nav-item active"><a class="nav-link" href="contactus.html"> <span class="fa fa-address-card fa-lg"></span> Контакты </a></li>
+                </ul>
+            </div>
+        </div>    
+    </nav>
+
+    <header class="jumbotron" style="background-image:url(data:image/jpeg;base64,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)">
+        <div class="container">
+            <div class="row row-header">
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <ol class="col-12 breadcrumb">
+                <li class="breadcrumb-item"><a href="./index.html">Главная</a></li>
+                <li class="breadcrumb-item active">Контакты</li>
+            </ol>
+            <div class="col-12">
+               <h3>Контакты</h3>
+               <hr>
+            </div>
+        </div>
+
+        <div class="row row-content">
+           <div class="col-12">
+              <h3>
+                Информация о местонахождении</h3>
+           </div>
+            <div class="col-12 col-sm-4 offset-sm-1">
+                   <h5>Наш Адрес</h5>
+                    <address style="font-size: 100%">
+                        Манаса 34/1<br>
+		              Алматы <br>
+		              Казахстан<br>
+		              <i class="fa fa-phone"></i>: +777 777 77 777<br>
+		              <i class="fa fa-fax"></i>: +77777777 <br>
+		              <i class="fa fa-envelope"></i>:
+                        <a href="mailto:confusion@food.net">Beibays2020@gmail.com</a>
+		           </address>
+            </div>
+            <div class="col-12 col-sm-6 offset-sm-1">
+                <h5>Карта</h5>
+                <div id="map" style="width:500px; height:400px"></div>
+            </div>
+        </div>
+
+        <div class="row row-content">
+           <div class="col-12">
+              <h3>
+                Отправьте нам свой отзыв</h3>
+           </div>
+            <div class="col-12 col-md-9">
+                <form>
+                    <div class="form-group row">
+                        <label for="firstname" class="col-md-2 col-form-label">Имя</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="lastname" class="col-md-2 col-form-label">Фамилия</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="telnum" class="col-12 col-md-2 col-form-label">Контактные данные</label>
+                        <div class="col-5 col-md-3">
+                            <input type="tel" class="form-control" id="areacode" name="areacode" placeholder="Area code">
+                        </div>
+                        <div class="col-7 col-md-7">
+                            <input type="tel" class="form-control" id="telnum" name="telnum" placeholder="Tel. number">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="emailid" class="col-md-2 col-form-label">Email</label>
+                        <div class="col-md-10">
+                            <input type="email" class="form-control" id="emailid" name="emailid" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-6 offset-md-2">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input"
+                                name="approve" id="approve" value="">
+                                <label class="form-check-label" for="approve">
+                                    <strong>
+                                        Можем ли мы связаться с вами?</strong>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-3 offset-md-1">
+                            <select class="form-control">
+                                <option>Tel.</option>
+                                <option>Email</option>
+                            </select>
+                        </div>
+                        
+                    </div>
+                    <div class="form-group row">
+                        <label for="feedback" class="col-md-2 col-form-label">Ваш отзыв</label>
+                        <div class="col-md-10">
+                            <textarea class="form-control" id="feedback" name="feedback" rows="12"> </textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="offset-md-2 col-md-10">
+                            <button type="submit" class="btn btn-primary">
+                                Отправить Отзыв
+                            </button>
+                        </div>
+                    </div>
+
+                
+                </form>
+            </div>
+
+                </form>
+            </div>
+             <div class="col-12 col-md">
+            </div>
+       </div>
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">             
+                <div class="col-4 offset-1 col-sm-2">
+                    <h5></h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="aboutus.html">О нас</a></li>
+                        <li><a href="menu.html"> Регистрация</a></li>
+                        <li><a href="contactus.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="col-7 col-sm-5">
+                    <h5>Наш Адрес</h5>
+                    <address>
+                        Манаса 34/1<br>
+                      <i class="fa fa-phone fa-lg"></i>: +77777777777<br>
+                      <i class="fa fa-envelope fa-lg"> </i>: Beibays2020@gmail.com </a>
+		           </address>
+                </div>
+                <div class="col-12 col-sm-4 align-self-center">
+                    <div class="text-center">
+                        <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-envelope" href="mailto:"><i class="fa fa-envelope fa-lg"></i></a>
+                    </div>
+                </div>
+           </div>
+           <div class="row justify-content-center">             
+                <div class="col-auto">
+                    <p>© Copyright Kingsman 2020</p>
+                </div>
+           </div>
+        </div>
+    </footer>
+ 
+
+</body>
+
+</html>
